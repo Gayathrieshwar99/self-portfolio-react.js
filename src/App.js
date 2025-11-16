@@ -6,23 +6,44 @@ function App() {
   return (
     <div className="App bg-gray-100 min-h-screen">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            <div className="text-xl font-bold text-gray-800">Kamaleshwar Parnandhi</div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-600 hover:text-blue-500">Home</a>
-              <a href="#about" className="text-gray-600 hover:text-blue-500">About</a>
-              <a href="#my-education" className="text-gray-600 hover:text-blue-500">My Education</a>
-              <a href="#hobbits" className="text-gray-600 hover:text-blue-500">Hobbits</a>
-              <a href="#skills" className="text-gray-600 hover:text-blue-500">Skills</a>
-              <a href="#projects" className="text-gray-600 hover:text-blue-500">Projects</a>
-              <a href="#my-achievements" className="text-gray-600 hover:text-blue-500">My Achievements</a>
-              <a href="#contact" className="text-gray-600 hover:text-blue-500">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+<nav className="bg-sky-400 blue shadow-lg fixed w-full top-0 z-50">
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="flex justify-between items-center py-4">
+      <div className="text-xl font-bold text-gray-800">Kamaleshwar Parnandhi</div>
+
+      <div className="hidden md:flex space-x-4">
+        {[
+          { name: "Home", link: "#home" },
+          { name: "About", link: "#about" },
+          { name: "My Education", link: "#my-education" },
+          { name: "Hobbits", link: "#hobbits" },
+          { name: "Skills", link: "#skills" },
+          { name: "Projects", link: "#projects" },
+          { name: "My Achievements", link: "#my-achievements" },
+          { name: "Contact", link: "#contact" }
+        ].map((item) => (
+          <a
+            key={item.link}
+            href={item.link}
+            className="
+              px-3 py-2 
+              rounded-md 
+              text-gray-700 
+              bg-gray-100 
+              hover:bg-blue-500 
+              hover:text-white 
+              transition-all 
+              duration-200
+            "
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</nav>
+
 
       {/* Hero Section */}
 <section id="home" className="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 pt-16">
