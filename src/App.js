@@ -125,11 +125,11 @@ function App() {
     {/* Reading */}
     <div className="flex flex-col items-center">
       <img 
-        src={`${process.env.PUBLIC_URL}/Reading.jpg`} 
-        alt="Reading" 
+        src={`${process.env.PUBLIC_URL}/Watching Moives.jpeg`} 
+        alt="Watching Moives" 
         className="w-40 h-40 object-cover rounded-lg mb-4 shadow-lg"
       />
-      <p className="text-xl md:text-2xl text-white">📖 Reading – I love mythological stories and science fiction. They let me escape reality and explore new worlds.</p>
+      <p className="text-xl md:text-2xl text-white">🎬 Watching Movies – I enjoy watching mythological and science-fiction movies. They help me relax, spark my imagination, and explore different worlds and ideas.</p>
     </div>
     
     {/* Gaming */}
@@ -204,23 +204,44 @@ function App() {
 
 
       {/* Projects Section */}
-      <section id="projects" className="h-screen flex items-center justify-center bg-gradient-to-r from-green-500 to-light-700 pt-16">
+      <section id="projects"
+  className="min-h-screen bg-gradient-to-r from-green-500 to-green-700 pt-32 scroll-mt-24">
+
         <div className="container mx-auto px-4">
-          <h2 className="text-6xl font-bold text-center mb-12 text-white">My Projects</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="text-5xl font-bold text-center mb-12 text-white">My Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">            
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 1: Digital Library Management System</h3>
+              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 1: Quiz App</h3>
               <p className="text-gray-700 leading-relaxed">
-                Users can see a list of books available and explore various genres.  
-                They can filter books based on authors or novelists.  
-                <br />
-                <span className="font-semibold">Gained knowledge:</span> Hands-on experience in building a real-time web application.  
-                <br />
-                <span className="text-indigo-600 font-semibold">Technologies:</span> Git, Python (Core), Django Framework.
+                Built an interactive quiz app using React.js with reusable components. • Managed questions, score and timer using React hooks. • Loaded quiz data through REST APIs and handled loading and errors.• Designed a clean, responsive UI with Tailwind CSS. • Added result summary, progress tracking and smooth navigation. • Used React Router for page flow and GitHub for version control
+                <br />                <br />
+                <span className="text-indigo-600 font-semibold">Technologies:</span> Git, React.js
               </p>
             </div>
+
+             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 2: Cashier app</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Built a restaurant cashier app with React.js for fast, responsive order handling. • Developed backend using Node.js and Express.js with full CRUD APIs.• Stored orders, menu items and billing data in MongoDB.• Tested all backend routes using Postman to ensure correct API responses.• Integrated frontend and backend for smooth order processing and billing flow  
+                <br />
+                <span className="font-semibold">Use Case:</span> Useful for restaurants to manage orders and billing efficiently.  
+                <br />
+                <span className="text-indigo-600 font-semibold">Technologies:</span> Node.js,Express.js, React.js and MongoDB.
+              </p>
+            </div>
+
+             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 3: my blog project-by-Django</h3>
+              <p className="text-gray-700 leading-relaxed">
+                A blogging platform where users can create, edit, and delete blog posts.  
+                Features include user authentication, comments, and categories for better organization.
+                <br />
+                <span className="text-indigo-600 font-semibold">Technologies:</span> Backend: Python (Django), React, OpenAI API, Azure for deployment.
+              </p>
+            </div>
+          
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 2: Retail Management System</h3>
+              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 4: Retail Management System</h3>
               <p className="text-gray-700 leading-relaxed">
                 Developed a web application for retail management.  
                 Features: Manage Products, Customers, Orders, and Users.  
@@ -231,22 +252,14 @@ function App() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 3: AI Recruitment Management System</h3>
+              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 5: AI Recruitment Management System</h3>
               <p className="text-gray-700 leading-relaxed">
                 An AI-powered platform that automates hiring by analyzing job descriptions, ranking resumes, recommending top candidates, and even sourcing profiles from job portals with automated outreach.  
                 <br />
                 <span className="text-indigo-600 font-semibold">Technologies:</span> Backend: Python (Django), React, OpenAI API, Azure for deployment.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-              <h3 className="text-xl font-bold mb-3 text-blue-600">Project 4: myblogproject-by-Django</h3>
-              <p className="text-gray-700 leading-relaxed">
-                A blogging platform where users can create, edit, and delete blog posts.  
-                Features include user authentication, comments, and categories for better organization.
-                <br />
-                <span className="text-indigo-600 font-semibold">Technologies:</span> Backend: Python (Django), React, OpenAI API, Azure for deployment.
-              </p>
-            </div>
+           
           </div>
         </div>
       </section>
@@ -262,8 +275,13 @@ function App() {
           </div>
           <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:scale-105 transition duration-500 border border-white/20 flex flex-col items-center">
             <img src={`${process.env.PUBLIC_URL}/intership.jpg`} alt="Internship Certificate" className="w-40 h-40 object-cover rounded-lg mb-4 shadow-md" />
-            <h3 className="text-xl font-semibold text-white mb-2">Internship</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">Think Algo Club Internship</h3>
             <p className="text-gray-200 text-center">Completed at The Think Algo Club with hands-on experience in web development.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:scale-105 transition duration-500 border border-white/20 flex flex-col items-center">
+            <img src={`${process.env.PUBLIC_URL}/TEN Intership Certificate.png`} alt="Internship Certificate" className="w-40 h-40 object-cover rounded-lg mb-4 shadow-md" />
+            <h3 className="text-xl font-semibold text-white mb-2">TEN Internship</h3>
+            <p className="text-gray-200 text-center">Completed at The Entrepreneurship Network experience in frontend development.</p>
           </div>
         </div>
         <button className="bg-white text-cyan-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300">View Certificates</button>
@@ -287,7 +305,7 @@ function App() {
         </p>
         <p className="text-md text-gray-300 mb-6">
           You can also reach me at: 
-          <a href="mailto:pkamallife@gmail.com" className="text-yellow-300 hover:underline ml-2">pkamallife@gmail.com</a>
+          <a href="mailto:pkamallife@gmail.com" className="text-yellow-300 hover:underline ml-2">nagaeshwar98.com</a>
         </p>
         <p className="text-lg text-gray-200 mb-8">Phone: <span className="text-yellow-200">+91 7989390757</span></p>
         <div className="flex flex-wrap justify-center md:justify-start gap-4">
